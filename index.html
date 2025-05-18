@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Arborama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .view {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+        }
+
+        #splash {
+            display: flex;
+            background-color: #91D34C;
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        #intro {
+            background-color: #f0f0f0;
+            flex-direction: column;
+            display: none;
+            z-index: 2;
+        }
+
+        #intro h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #intro button {
+            background-color: #91D34C;
+            border: none;
+            padding: 15px 25px;
+            color: white;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #map-view {
+            display: none;
+            z-index: 1;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Splash screen -->
+    <div id="splash" class="view">
+        Arborama
+    </div>
+
+    <!-- Intro screen -->
+    <div id="intro" class="view">
+        <h1>Trädvandringar i Stockholm</h1>
+        <button onclick="startMap()">Klicka här</button>
+    </div>
+
+    <!-- Map screen -->
+    <div id="map-view">
+        <iframe src="stockholm_trees_map.html"></iframe>
+    </div>
+
+    <script>
+        // Visa splash först
+        window.addEventListener('load', function () {
+            const splash = document.getElementById('splash');
+            const intro = document.getElementById('intro');
+
+            splash.style.display = 'flex';
+
+            setTimeout(() => {
+                splash.style.display = 'none';
+                intro.style.display = 'flex';
+            }, 2000);
+        });
+
+        // När användaren klickar på "Starta vandringen"
+        function startMap() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('map-view').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

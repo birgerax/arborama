@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c2c937baf869db322117cd7778557e81 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c2c937baf869db322117cd7778557e81" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c2c937baf869db322117cd7778557e81 = L.map(
+                "map_c2c937baf869db322117cd7778557e81",
+                {
+                    center: [59.3293, 18.0686],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3d01e7dfdb5c43565b4205b99ba49e94 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "CartoDB",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3d01e7dfdb5c43565b4205b99ba49e94.addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var marker_cluster_6fd49796297d8136e8150ba61e2da096 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            marker_cluster_6fd49796297d8136e8150ba61e2da096.addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var marker_157ecc2b575df2e0446be598e051b7af = L.marker(
+                [59.33210074001757, 18.07150116288134],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_91248d9e45293bfcb1c4a37e60299ea2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e1\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_157ecc2b575df2e0446be598e051b7af.setIcon(div_icon_91248d9e45293bfcb1c4a37e60299ea2);
+        
+    
+        var popup_305a1157023014b6e9edd40e20b84ca5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cfb0998df747329cedb4fa5773c98f8e = $(`<div id="html_cfb0998df747329cedb4fa5773c98f8e" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="/content/1.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>1. Kungsträdgården, vid dammen</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Prydnadskörsbär, Prunus ’Accolade’</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Det är inte varje dag man får promenera med huvudet i fluffiga rosa moln. Varje vår blir det en nyhet i hela landet när körsbärsträden i Kungsträdgården blommar. Stockholmare och turister vallfärdar för att fotografera denna blomsterfägring av vackert rosa, halvfyllda blommor i slutet av april.      <p>Körsbärsträden planterades 1998, i dubbla rader på båda sidorna av dammen. Träden är en hybrid mellan bergkörsbär (Prunus sargentii) och vårkörsbär (Prunus subhirtella). Den har en smalare krona i ungdomen men blir bredare med tiden, för att till slut få en nästan flat kronuppbyggnad, där grenarna hänger nedåt.</p>      <p>Andra platser i staden där du kan se prydnadskörsbär är på Luma torg i Hammarby Sjöstad.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[1].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_305a1157023014b6e9edd40e20b84ca5.setContent(html_cfb0998df747329cedb4fa5773c98f8e);
+            
+        
+
+        marker_157ecc2b575df2e0446be598e051b7af.bindPopup(popup_305a1157023014b6e9edd40e20b84ca5)
+        ;
+
+        
+    
+    
+                marker_157ecc2b575df2e0446be598e051b7af.setIcon(div_icon_91248d9e45293bfcb1c4a37e60299ea2);
+            
+    
+            var marker_d22502684ec7062ae2e33ad05e533ed5 = L.marker(
+                [59.33158633411901, 18.07190885862338],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_76fa7bda0f22b327fe2870df72190868 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e2\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_d22502684ec7062ae2e33ad05e533ed5.setIcon(div_icon_76fa7bda0f22b327fe2870df72190868);
+        
+    
+        var popup_56c84921331b2ef863fde1f298c4063d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_490ff4d44620c4335ad08c39dc81071e = $(`<div id="html_490ff4d44620c4335ad08c39dc81071e" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>2. Kungsträdgården, vid alléerna</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Skogslind, Tilia X cordata ’Rancho’, selektion av skogslind</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Lind är det vanligaste trädet på innerstadens gator. Framför allt på grund av esplanadsystemets utbyggnad under slutet av 1800-talet, men även för att det är lättskött och klarar sig ganska bra i staden. I Kungsträdgården står lindarna i två, dubbelradiga alléer på var sida om parken – Jussi Björlings allé och Birgit Nilssons allé. Träden som står där idag planterades 1996 och 2003–2006.      <p>Benämningen cordata syftar till bladens hjärtform. Linden kan under sommaren avge så kallad honungsdagg – ett sekret som utsöndras av löss som suger växtsaft ur bladen.</p>      <p>Andra platser i staden där du kan se skogslind är på trottoaren vid Hammarby allé.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[2].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_56c84921331b2ef863fde1f298c4063d.setContent(html_490ff4d44620c4335ad08c39dc81071e);
+            
+        
+
+        marker_d22502684ec7062ae2e33ad05e533ed5.bindPopup(popup_56c84921331b2ef863fde1f298c4063d)
+        ;
+
+        
+    
+    
+                marker_d22502684ec7062ae2e33ad05e533ed5.setIcon(div_icon_76fa7bda0f22b327fe2870df72190868);
+            
+    
+            var marker_f8220fa454fe08ebf82eb9faf6b6a92d = L.marker(
+                [59.330464464454856, 18.071962502799966],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_9c47fa91c4474235f99748ced2f14d9b = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e3\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_f8220fa454fe08ebf82eb9faf6b6a92d.setIcon(div_icon_9c47fa91c4474235f99748ced2f14d9b);
+        
+    
+        var popup_737ed61bb26526255e8f0c227a6aca6f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1a639adf3d51ac4e15cf670aaad1db23 = $(`<div id="html_1a639adf3d51ac4e15cf670aaad1db23" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>3. Kungsträdgården, vid Tehuset</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Skogsalm, Ulmus gla bra</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Almarna är planterade i slutet av 1800-talet som en så kallad boskée, en formellt planterad grupp av träd, ofta i rader eller geometriska mönster, som skapar ett avgränsat rum i en park. Idag står Tehuset i den cirkelformade planteringen. Almen var ett av de vanligaste stadsträden i både park- och gatumiljöer innan den allvarliga typen av almsjukan gjorde sitt intåg.      <p>Almen växer i en vasform, med en tidigt uppsplittrad krona och stora, mörkgröna, asymmetriska, sågade blad. Höstfärgen är gyllengul. De blommar på bar kvist under vårvintern med små blommor.</p>      <p>1971 planerade politikerna i Stockholm att bygga en tunnelbaneuppgång till Kungsträdgårdens tunnelbana precis där almarna står. Det blev stora protester som slutade med att almarna fick stå kvar.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[3].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_737ed61bb26526255e8f0c227a6aca6f.setContent(html_1a639adf3d51ac4e15cf670aaad1db23);
+            
+        
+
+        marker_f8220fa454fe08ebf82eb9faf6b6a92d.bindPopup(popup_737ed61bb26526255e8f0c227a6aca6f)
+        ;
+
+        
+    
+    
+                marker_f8220fa454fe08ebf82eb9faf6b6a92d.setIcon(div_icon_9c47fa91c4474235f99748ced2f14d9b);
+            
+    
+            var marker_dc9fc571ec03a6e6fcd5b414266f5ddd = L.marker(
+                [59.33044257393739, 18.069258836239964],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_06e549df0e86193b745799cda0450886 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e4\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_dc9fc571ec03a6e6fcd5b414266f5ddd.setIcon(div_icon_06e549df0e86193b745799cda0450886);
+        
+    
+        var popup_0033a9f82169886b022c6bc82358beee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_05b808b5d48e5567bd5d5eb55f80aa78 = $(`<div id="html_05b808b5d48e5567bd5d5eb55f80aa78" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>4. Jakobsgatan vid Hamburger Börs</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Hybridkörsbär, Prunus X gondouinii ’Schnee’</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Det här är ett mindre träd med en först konisk, senare brett rundad och slutligen något tillplattad krona. Det har en mycket rik blomning och blommar på bar kvist i början av maj. Blommorna är rent vita och enkla till något fyllda. Höstfärgerna är sprakande, i gult till orangerött. Träden planterades under 1990-talet.      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[4].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_0033a9f82169886b022c6bc82358beee.setContent(html_05b808b5d48e5567bd5d5eb55f80aa78);
+            
+        
+
+        marker_dc9fc571ec03a6e6fcd5b414266f5ddd.bindPopup(popup_0033a9f82169886b022c6bc82358beee)
+        ;
+
+        
+    
+    
+                marker_dc9fc571ec03a6e6fcd5b414266f5ddd.setIcon(div_icon_06e549df0e86193b745799cda0450886);
+            
+    
+            var marker_b7ed02b281b02cc196874c771d9a8480 = L.marker(
+                [59.33065600579097, 18.068572190779687],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_45805c730d5bfa9a7d0215753f0290b7 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e5\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_b7ed02b281b02cc196874c771d9a8480.setIcon(div_icon_45805c730d5bfa9a7d0215753f0290b7);
+        
+    
+        var popup_92a901824947db8620c54b6ae42e5b58 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1a9594a1197ab342db6512697ef2a5b4 = $(`<div id="html_1a9594a1197ab342db6512697ef2a5b4" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>5. Regeringsgatan, mittemot Gallerian</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Mannaask, Fraxinus ornus</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      I de upphöjda betongkaren på Regeringsgatan planterades mannaaskar i mitten av 1970-talet. Detta lilla och långsamt växande träd har en god förmåga att klara av knappa förhållanden och är friskt grön i färgen. Kronan är samlad och har en rund till oval form. Höstfärgen är gul. I juni blommar träden generöst med vita plymer. Den kåda som utvinns ur träden i odlingar i Sydeuropa används som ett laxermedel, och skiljer sig från den manna som omnämns i andra sammanhang.      <p>Andra platser i staden där du kan se mannaask är på Brunkebergstorg vid Riksbanken och på Mäster Samuelsgatan.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[5].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_92a901824947db8620c54b6ae42e5b58.setContent(html_1a9594a1197ab342db6512697ef2a5b4);
+            
+        
+
+        marker_b7ed02b281b02cc196874c771d9a8480.bindPopup(popup_92a901824947db8620c54b6ae42e5b58)
+        ;
+
+        
+    
+    
+                marker_b7ed02b281b02cc196874c771d9a8480.setIcon(div_icon_45805c730d5bfa9a7d0215753f0290b7);
+            
+    
+            var marker_d824fa646335667059bd5b56e38a197c = L.marker(
+                [59.330171677731, 18.067939189495995],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_0477a1c83142e55ac5acdc47cb842de3 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e6\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_d824fa646335667059bd5b56e38a197c.setIcon(div_icon_0477a1c83142e55ac5acdc47cb842de3);
+        
+    
+        var popup_eb2b3a8c83ac79ad5796b7def6b25a4a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_300e10001f26b0aab4058788f56e0d44 = $(`<div id="html_300e10001f26b0aab4058788f56e0d44" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>6. Jakobsgatan, utanför Gallerian</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Kärrek, Quercus palustris</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Unga kärrekar har en spikrak, genomgående stam och en konisk kronform. Med tiden breder kronan ut sig och de nedersta grenarna får ett hängande växtsätt. Bladen är djupflikiga och klargrönt glänsande, och får vackra höstfärger. Träden producerar rikligt med ekollon.      <p>Kärrekarna på Jakobsgatan planterades under slutet av 1990-talet.</p>      <p>Andra platser i staden där du kan hitta kärrek är på Eastmanvägen och Olivecronas väg i Sabbatsbergsområdet, där kärrekarna växer så det knakar. Du kan också se kärrekar i Järnvägsparken, bredvid Tegelbacken. De träden har flyttats från Malmtorgsgatan och står i en grupp om fem träd och en solitärt. I Kista dominerar kärreken bland gatuträden.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[6].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_eb2b3a8c83ac79ad5796b7def6b25a4a.setContent(html_300e10001f26b0aab4058788f56e0d44);
+            
+        
+
+        marker_d824fa646335667059bd5b56e38a197c.bindPopup(popup_eb2b3a8c83ac79ad5796b7def6b25a4a)
+        ;
+
+        
+    
+    
+                marker_d824fa646335667059bd5b56e38a197c.setIcon(div_icon_0477a1c83142e55ac5acdc47cb842de3);
+            
+    
+            var marker_e3d8cd2dc5ec65db322e6768c85771aa = L.marker(
+                [59.33005948775691, 18.067386654418506],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_31d719e783f36e1ae950e990ca0a4bbd = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e7\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_e3d8cd2dc5ec65db322e6768c85771aa.setIcon(div_icon_31d719e783f36e1ae950e990ca0a4bbd);
+        
+    
+        var popup_b64069d61756f8b80f4d2c9073162033 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e7d4eaae90b5caafec8b66ab4bc2f9ea = $(`<div id="html_e7d4eaae90b5caafec8b66ab4bc2f9ea" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>7. Jakobsgatan, korsningen Malmtorgsgatan</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Papegojbuske, Parrotia persica</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Papegojbusken är trots sitt namn egentligen ett mindre träd, som kan bli upp till tio meter högt. Dessa träd får en fantastisk höstfärg i orange, rött och lila. Finast färger får trädet på en varm växtplats och efter en varm sommar.      <p>Träden planterades 2019.</p>      <p>Andra platser i staden där du kan se papegojbuske är på Medevigatan och Luntmakargatan.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[7].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_b64069d61756f8b80f4d2c9073162033.setContent(html_e7d4eaae90b5caafec8b66ab4bc2f9ea);
+            
+        
+
+        marker_e3d8cd2dc5ec65db322e6768c85771aa.bindPopup(popup_b64069d61756f8b80f4d2c9073162033)
+        ;
+
+        
+    
+    
+                marker_e3d8cd2dc5ec65db322e6768c85771aa.setIcon(div_icon_31d719e783f36e1ae950e990ca0a4bbd);
+            
+    
+            var marker_18c0ca680ac20364f1597af36a15ebe8 = L.marker(
+                [59.33027839467252, 18.067145255623878],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_113ab8e5b3eed285abd9c3d35b33c627 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e8\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_18c0ca680ac20364f1597af36a15ebe8.setIcon(div_icon_113ab8e5b3eed285abd9c3d35b33c627);
+        
+    
+        var popup_26dff234d615ec28431b2df73348743f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fedcb5e7a83f5e1f2cdb9a025d03c279 = $(`<div id="html_fedcb5e7a83f5e1f2cdb9a025d03c279" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>8. Malmtorgsgatans östra sida</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Magnolia ’Galaxy’</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>Denna magnolia blommar med stora rosaröda blommor.</div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[8].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_26dff234d615ec28431b2df73348743f.setContent(html_fedcb5e7a83f5e1f2cdb9a025d03c279);
+            
+        
+
+        marker_18c0ca680ac20364f1597af36a15ebe8.bindPopup(popup_26dff234d615ec28431b2df73348743f)
+        ;
+
+        
+    
+    
+                marker_18c0ca680ac20364f1597af36a15ebe8.setIcon(div_icon_113ab8e5b3eed285abd9c3d35b33c627);
+            
+    
+            var marker_8ae8da35dc5de92325d7b54c39f531f7 = L.marker(
+                [59.331404574038345, 18.06636320377362],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_0774087154f2d76334d86b0cfeaa2408 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e9\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_8ae8da35dc5de92325d7b54c39f531f7.setIcon(div_icon_0774087154f2d76334d86b0cfeaa2408);
+        
+    
+        var popup_6a01c0fc7892dacba749e8e098737f19 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0e81b5765d701d6d792bf15108ce2ff5 = $(`<div id="html_0e81b5765d701d6d792bf15108ce2ff5" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>9. Brunkebergstorg</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Magnolia</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      År 2017 rustade staden upp Brunkebergstorg i samarbete med fastighetsägare för att skapa en bättre mötesplats mitt i city. Platsen är belagd med granithällar och i de upphöjda terrazzocirklarna planterades en blandning av magnolior med olika karaktär.      <p>Wada’s Memory är en hybrid mellan japansk magnolia (Magnolia kobus) och pilbladig magnolia (Magnolia salicifolia). Den blommar med stora, helvita blommor och har blomblad som hänger nedåt.</p>      <p>Rosenmagnolia ’Heaven scent’ är en kulturhybrid mellan yunanmagnolia (Magnolia denudata) och liljemagnolian (Magnolia liliflora). Den blommar med doftande, rosaröda blommor.</p>      <p>Biondi är en av de tidigast blommande magnoliorna. Den får vita blommor med rosa inslag.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[9].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_6a01c0fc7892dacba749e8e098737f19.setContent(html_0e81b5765d701d6d792bf15108ce2ff5);
+            
+        
+
+        marker_8ae8da35dc5de92325d7b54c39f531f7.bindPopup(popup_6a01c0fc7892dacba749e8e098737f19)
+        ;
+
+        
+    
+    
+                marker_8ae8da35dc5de92325d7b54c39f531f7.setIcon(div_icon_0774087154f2d76334d86b0cfeaa2408);
+            
+    
+            var marker_a8b6c00b9d9f47951a421f91d2845180 = L.marker(
+                [59.33169296794744, 18.06512278247012],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_47cd13682f6636ff9b9d4c96656a0165 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e10\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_a8b6c00b9d9f47951a421f91d2845180.setIcon(div_icon_47cd13682f6636ff9b9d4c96656a0165);
+        
+    
+        var popup_bf6b85f56a81e383b1192bde4b931ba3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f82a7a1da9f079121a02ba45286fdae7 = $(`<div id="html_f82a7a1da9f079121a02ba45286fdae7" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>10. Benny Fredrikssons torg</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Turkisk trädhassel, Corylus colurna</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      I den upphöjda rundeln mellan Kulturhuset och Riksbanken planterades på 1990-talet en turkisk trädhassel. Trädet har äggrunda, svagt flikade, ljusgröna blad och en tydligt genomgående stam med flagig bark. Under vintern pryds det av dekorativa hanhängen och små röda honblommor. Nötterna är ganska stora och sitter samlade i stora, fransiga buketter.      <p>Du kan också hitta turkisk trädhassel på Sankt Göransgatan. Förskolor i det området har rapporterat att uppspelta ekorrar plockar hasselnötter av träden.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[10].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_bf6b85f56a81e383b1192bde4b931ba3.setContent(html_f82a7a1da9f079121a02ba45286fdae7);
+            
+        
+
+        marker_a8b6c00b9d9f47951a421f91d2845180.bindPopup(popup_bf6b85f56a81e383b1192bde4b931ba3)
+        ;
+
+        
+    
+    
+                marker_a8b6c00b9d9f47951a421f91d2845180.setIcon(div_icon_47cd13682f6636ff9b9d4c96656a0165);
+            
+    
+            var marker_fac9165ed68a456dc0d5913b3cd360e8 = L.marker(
+                [59.331985008098364, 18.061241672472264],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_eec37d3f2e2a7f0f74206d668873bf70 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e11\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_fac9165ed68a456dc0d5913b3cd360e8.setIcon(div_icon_eec37d3f2e2a7f0f74206d668873bf70);
+        
+    
+        var popup_72c04cb4c16db1a90f6640df656740e0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f4613470fca82cb3a3d40fe334e5af8a = $(`<div id="html_f4613470fca82cb3a3d40fe334e5af8a" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>11. Klarabergsviadukten, utanför Åhléns</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Kinesträd, Koelreuteria paniculata</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Kinesträden på Klarabergsviadukten är några av de träd som staden får flest frågor kring. Det är många förbipasserande som nyfiket undrar vad det är för slags träd.      <p>Tidigare stod det lindar på platsen men som inte trivdes alls. De mycket ledsna träden såg ut som att de hade gått en rond med en torktumlare. Det är inte särskilt förvånande då platsen inte gav lindarna några vidare förutsättningar. Det är en varm plats i staden och träden hade ytterst begränsat med rotutrymme i underjordiska lådor, ovanpå tunnelbanans tak.</p>      <p>Kinesträden hamnade här i omgångar efter att tätskiktet till tunnelbanan renoverades i mitten av 2010-talet. Det är ett mindre träd, som kan bli fem till åtta meter högt. En utmaning har varit att hitta fina exemplar som stamträd i plantskolan. Dels för att träden är fröförökade och dels för att de verkar föredra att växa som en buske.</p>      <p>Bladen är vanligen parbladiga och cirka 30 centimeter långa med bronsfärgat lövutspring, och blir sedan mörkgröna. Höstfärgen är brungul till orange. De blommar sent, under juli–augusti, med gula plymer. Träden får frukter under september som dekorativt sitter kvar i träden som kinesiska lyktor. Trädet är ljuskrävande och gillar varma platser.</p>      <p>Andra platser i staden där du kan hitta kinesträd är på Magnus Ladulåsgatan och snart även vid Slussen. Vill man resa lite längre bort finns de på Friisgatan i Malmö och i Dresden i Tyskland.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[11].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_72c04cb4c16db1a90f6640df656740e0.setContent(html_f4613470fca82cb3a3d40fe334e5af8a);
+            
+        
+
+        marker_fac9165ed68a456dc0d5913b3cd360e8.bindPopup(popup_72c04cb4c16db1a90f6640df656740e0)
+        ;
+
+        
+    
+    
+                marker_fac9165ed68a456dc0d5913b3cd360e8.setIcon(div_icon_eec37d3f2e2a7f0f74206d668873bf70);
+            
+    
+            var marker_0d0e809e5f4ef5e74eae7647d12194de = L.marker(
+                [59.331454241393075, 18.0599490761384],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_1c993bb515b06f3dc8dd534df47722e2 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e12\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_0d0e809e5f4ef5e74eae7647d12194de.setIcon(div_icon_1c993bb515b06f3dc8dd534df47722e2);
+        
+    
+        var popup_e4a6f07b85d33844cd7c7f114ce66d9f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3ad23f91c1d75aab260d12163f0cfd1b = $(`<div id="html_3ad23f91c1d75aab260d12163f0cfd1b" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>12. Klara västra kyrkogata</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Korstörne, Gleditsia triacanthos f. inermis</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Utformningen på platsen flörtar lite med miniparken Paley park i New York där en dunge ljusgrön korstörne står insprängd mellan skyskraporna.      <p>Korstörnet är en värmegynnad och ljusälskande pionjärart och ett av de vanligaste gatuträden i östra USA. De beskrivs ibland som ”torgträd”, det vill säga träd som får blad lite senare på året. Träden skymmer därför inte vårsolen, samtidigt som ett skirt lövverk senare ger en behaglig skugga under högsommaren.</p>      <p>Under hösten får träden fina, gula höstfärger och dekorativa ärtskidor som kan sitta kvar när träden är avlövade. ”Inermis” är latin för obeväpnad, vilket innebär att de här träden inte har de spetsiga och vassa utskott, så kallade tornar, som skyddar mot betande djur och som torde vara varje arborists mardröm.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[12].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_e4a6f07b85d33844cd7c7f114ce66d9f.setContent(html_3ad23f91c1d75aab260d12163f0cfd1b);
+            
+        
+
+        marker_0d0e809e5f4ef5e74eae7647d12194de.bindPopup(popup_e4a6f07b85d33844cd7c7f114ce66d9f)
+        ;
+
+        
+    
+    
+                marker_0d0e809e5f4ef5e74eae7647d12194de.setIcon(div_icon_1c993bb515b06f3dc8dd534df47722e2);
+            
+    
+            var marker_7fcda5f9e60d1f956c319397384891e9 = L.marker(
+                [59.33063625281176, 18.059503681850124],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_1e5dcc409ad9030e2c8ff1dde7ab5400 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e13\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_7fcda5f9e60d1f956c319397384891e9.setIcon(div_icon_1e5dcc409ad9030e2c8ff1dde7ab5400);
+        
+    
+        var popup_c942b7913d8cb1724c768f88da8ad88a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c0c6a68bcf73aa93b901aa517a726b6e = $(`<div id="html_c0c6a68bcf73aa93b901aa517a726b6e" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>13. Vasagatan, mittemot Centralstationen</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Japansk zelkova, Zelkova serrata</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Vasagatan rustades upp 2018–2021 och fick då bredare trottoarer, cykelbanor och nya trädplanteringar.      <p>Zelkovan tillhör almfamiljen och har stora likheter med denna. Växtsättet är brett vasformigt. Bladen är mörkgröna, utdragna med sågade kanter. Höstfärgerna är roströda. De har en slät stam som med tiden spricker upp i dekorativa plattor.</p>      <p>Andra platser i staden där du kan hitta zelkova är vid korsningen Rådmansgatan och Birger Jarlsgatan.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[13].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_c942b7913d8cb1724c768f88da8ad88a.setContent(html_c0c6a68bcf73aa93b901aa517a726b6e);
+            
+        
+
+        marker_7fcda5f9e60d1f956c319397384891e9.bindPopup(popup_c942b7913d8cb1724c768f88da8ad88a)
+        ;
+
+        
+    
+    
+                marker_7fcda5f9e60d1f956c319397384891e9.setIcon(div_icon_1e5dcc409ad9030e2c8ff1dde7ab5400);
+            
+    
+            var marker_49a7642c5007151e16e84fc1833aec6c = L.marker(
+                [59.33202738155008, 18.058277626533595],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_ff90190b09019172ba96aefb464af7c4 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e14\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_49a7642c5007151e16e84fc1833aec6c.setIcon(div_icon_ff90190b09019172ba96aefb464af7c4);
+        
+    
+        var popup_319edfeb828b0dfcd21af843fa22d186 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8fa9123e51a1c87296793867698e64a4 = $(`<div id="html_8fa9123e51a1c87296793867698e64a4" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>14. Vasagatan, korsningen Mäster Samuelsgatan</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Ambraträd, Liquidambar styraciflua ’Worplesdon’</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Trädet kommer ursprungligen från USA, men sorten är en engelsk selektion. I början växer trädet som en pelare för att med tiden få en mer oval form. De har spännande, stjärnformiga blad med utdragna spetsar och djupa flikar. Höstfärgerna kan bli slående i aprikos och orange. Båda orden i namnet syftar till den kåda som kan användas som tuggummi, vilket även har gett trädet dess amerikanska namn, ”Sweetgum”.      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[14].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_319edfeb828b0dfcd21af843fa22d186.setContent(html_8fa9123e51a1c87296793867698e64a4);
+            
+        
+
+        marker_49a7642c5007151e16e84fc1833aec6c.bindPopup(popup_319edfeb828b0dfcd21af843fa22d186)
+        ;
+
+        
+    
+    
+                marker_49a7642c5007151e16e84fc1833aec6c.setIcon(div_icon_ff90190b09019172ba96aefb464af7c4);
+            
+    
+            var marker_1445e575f335f5983a684211511d5b6a = L.marker(
+                [59.33347646357579, 18.057035321554384],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_3890424515066e569a4cd7daa20b6758 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e15\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_1445e575f335f5983a684211511d5b6a.setIcon(div_icon_3890424515066e569a4cd7daa20b6758);
+        
+    
+        var popup_ce9b08ffb5c8808438c3a78c0788eeb0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_085842317ef314fb10dfff0c155b3cd1 = $(`<div id="html_085842317ef314fb10dfff0c155b3cd1" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>15. Vasagatan, korsningen Gamla Brogata</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Rödask, Fraxinus pensylvanica ’Summit’</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      Det här trädet är en amerikansk selektion av rödask, med ovalt till rundat växtsätt. Trädet har stora och vackert glänsande, gröna blad med en smörgul höstfärg. Trädet är värmegynnat, torktåligt och tål stadsklimatet.      <p>Andra platser i staden där du kan hitta rödask är på Fredriksdalstorget, där den står i kombination med vitask (Fraxinus americana ’Autumn Purple’), och på Torsgatan.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[15].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_ce9b08ffb5c8808438c3a78c0788eeb0.setContent(html_085842317ef314fb10dfff0c155b3cd1);
+            
+        
+
+        marker_1445e575f335f5983a684211511d5b6a.bindPopup(popup_ce9b08ffb5c8808438c3a78c0788eeb0)
+        ;
+
+        
+    
+    
+                marker_1445e575f335f5983a684211511d5b6a.setIcon(div_icon_3890424515066e569a4cd7daa20b6758);
+            
+    
+            var marker_0dfec228863e31c9dde291c4a3569d35 = L.marker(
+                [59.33415188448287, 18.05644586312134],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var div_icon_07ba3e1682babb03023e6a4d93d4df95 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"background-color: #91D34C; color: white;\n                        border-radius: 50%; width: 28px; height: 28px;\n                        text-align: center; line-height: 28px;\n                        font-weight: bold;\"\u003e16\u003c/div\u003e\n        ",
+  "className": "empty",
+});
+            marker_0dfec228863e31c9dde291c4a3569d35.setIcon(div_icon_07ba3e1682babb03023e6a4d93d4df95);
+        
+    
+        var popup_433a0d5d4a079c40b28c74ef64372f0d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_164704ee8c98833fb06c3a396c737d94 = $(`<div id="html_164704ee8c98833fb06c3a396c737d94" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 500px; width: 280px; overflow-y: auto; padding: 10px;">         <img src="https://ascoolistockholm.wordpress.com/wp-content/uploads/2014/04/bcbcb.jpg" alt="Bild på trädet" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 10px;">         <h2 style='margin-bottom: 10px;'>16. Vasagatan, korsningen Kungsgatan</h2>         <h4 style='color: darkgreen; margin-top: 0;'>Berlineral, Alnus X spaethii</h4>         <div style='font-size: 15px; line-height: 1.6; text-align: justify;'>       <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; text-align: justify;">      I naturen står alar ofta på platser där vattentillgången kan ändras mycket över året, till exempel stränder. Det gör att den är väl anpassad till det hårda klimat som innerstaden innebär. Den visar god tillväxt i växtbäddar uppbyggda med makadam, biokol och kompost. Den här alen är en hybrid mellan japansk al (Alnus japonica) och storbladig al (Alnus subcordata). Berlineralen har en rak, genomgående stam och ett friskt, mörkgrönt bladverk. Tyvärr får den inga höstfärger, utan bladen förblir gröna till dess att de faller av.      <p>Andra platser i staden där du kan se berlineral är på Torsgatan och på Sockenvägen vid Sockenplan.</p>      </div>      </div>         <div style="text-align: center; margin-top: 10px;">             <a href="javascript:document.getElementsByClassName('leaflet-marker-icon')[0].click();"                 style="background-color: #91D34C; color: white; padding: 8px 12px;                       text-decoration: none; border-radius: 6px; display: inline-block;">                Till nästa träd →             </a>         </div>     </div>     </div>`)[0];
+                popup_433a0d5d4a079c40b28c74ef64372f0d.setContent(html_164704ee8c98833fb06c3a396c737d94);
+            
+        
+
+        marker_0dfec228863e31c9dde291c4a3569d35.bindPopup(popup_433a0d5d4a079c40b28c74ef64372f0d)
+        ;
+
+        
+    
+    
+                marker_0dfec228863e31c9dde291c4a3569d35.setIcon(div_icon_07ba3e1682babb03023e6a4d93d4df95);
+            
+    
+            var marker_0be9a8a33c2b41cd0baa48ca067f38d2 = L.marker(
+                [59.33210074001757, 18.07150116288134],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var icon_bd6afcd509bdf921bb96c3660cd90689 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6ed4c95f1bef3cfc0d2040d08a1ecd23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6bb5661867d070e8c0e56490321a91b = $(`<div id="html_e6bb5661867d070e8c0e56490321a91b" style="width: 100.0%; height: 100.0%;">         <b>Trädpromenaden: från Kungsträdgården till Vasagatan</b><br>         Promenaden är cirka 1,8 kilometer lång och tar ungefär 25 minuter att gå i lugn takt.         Du kan följa hela sträckan eller bara besöka enstaka träd längs vägen.     </div>`)[0];
+                popup_6ed4c95f1bef3cfc0d2040d08a1ecd23.setContent(html_e6bb5661867d070e8c0e56490321a91b);
+            
+        
+
+        marker_0be9a8a33c2b41cd0baa48ca067f38d2.bindPopup(popup_6ed4c95f1bef3cfc0d2040d08a1ecd23)
+        ;
+
+        
+    
+    
+                marker_0be9a8a33c2b41cd0baa48ca067f38d2.setIcon(icon_bd6afcd509bdf921bb96c3660cd90689);
+            
+    
+            var marker_3e2f618db15ab2f31d2930d4db933348 = L.marker(
+                [59.33415188448287, 18.05644586312134],
+                {
+}
+            ).addTo(map_c2c937baf869db322117cd7778557e81);
+        
+    
+            var icon_d3590753845be7da2000232ec268613b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag-checkered",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f322375111582917c091f949590fd31 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8054e13988906389618da0c3a397c9c5 = $(`<div id="html_8054e13988906389618da0c3a397c9c5" style="width: 100.0%; height: 100.0%;">Slut: Vasagatan, korsningen Kungsgatan</div>`)[0];
+                popup_1f322375111582917c091f949590fd31.setContent(html_8054e13988906389618da0c3a397c9c5);
+            
+        
+
+        marker_3e2f618db15ab2f31d2930d4db933348.bindPopup(popup_1f322375111582917c091f949590fd31)
+        ;
+
+        
+    
+    
+                marker_3e2f618db15ab2f31d2930d4db933348.setIcon(icon_d3590753845be7da2000232ec268613b);
+            
+</script>
+</html>
